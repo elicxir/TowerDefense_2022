@@ -1,0 +1,3 @@
+[submodule "basesystem"]
+	path = basesystem
+	url = https://github.com/elicxir/ELICXIRs_BaseFramework
