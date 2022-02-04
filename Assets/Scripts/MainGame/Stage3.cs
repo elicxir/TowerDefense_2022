@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class Stage3 : MainGame
 {
+    [SerializeField]Player player;
 
+    public override void Updater()
+    {
+        player.Updater();
+    }
 }

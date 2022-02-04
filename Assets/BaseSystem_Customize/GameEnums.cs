@@ -14,7 +14,4 @@ public enum gamescene
     GameManager,
     Scene1,
     Scene2,
-    Stage1,
-    Stage2,
-    Stage3,
 }
