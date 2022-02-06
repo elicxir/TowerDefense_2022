@@ -16,7 +16,6 @@ public enum gamescene
     Scene2,
 }
 
-
 public enum BGM
 {
     BGM1,
