@@ -9,5 +9,7 @@ public class Stage3 : MainGame
     public override void Updater()
     {
         player.Updater();
+
+        GM.Camera.Position= player.transform.position;
     }
 }
