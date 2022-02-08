@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     [EnumIndex(typeof(Direction))] [SerializeField] Sprite[] sprites;
 
+    [SerializeField] Lantern lantern;
     enum Direction {
         right,
         left,
@@ -84,11 +85,23 @@ public class Player : MonoBehaviour
         canMove = true;
     }
 
-
+    void Place()
+    {
+        if (canMove)
+        {
+            Instantiate(lantern, transform.position, Quaternion.Euler(0, 0, 0));
+        }
+    }
 
     // Update is called once per frame
     public void Updater()
     {
+
+        if (GameManager.Game_Manager.Input.ButtonDown(Control.Button1))
+        {
+            Place();
+        }
+
         if (GameManager.Game_Manager.Input.InputArrow() == Vector2.right)
         {
             if (canMove)
@@ -116,9 +129,6 @@ public class Player : MonoBehaviour
             {
                 StartCoroutine(Move(Direction.down));
             }
-        }
-        else
-        {
         }
 
     }
